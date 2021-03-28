@@ -296,3 +296,7 @@ set -g mode-keys vi
 # move status line to top
 #set -g status-position top
 
+# pane movement
+bind j command-prompt -p "join pane from:"  "join-pane -s :'%%'"
+bind s command-prompt -p "send pane to:"  "join-pane -t :'%%'"
+bind b break-pane
