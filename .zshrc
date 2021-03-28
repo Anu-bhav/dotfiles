@@ -78,6 +78,10 @@ DISABLE_MAGIC_FUNCTIONS=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(zsh-autosuggestions zsh-syntax-highlighting tmux)
 
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
+# zstyle :omz:plugins:ssh-agent identities website_portfolio
+# zstyle :omz:plugins:ssh-agent lifetime 4h
+
 ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
@@ -127,3 +131,5 @@ if [ -f `which powerline-daemon` ]; then
     POWERLINE_BASH_SELECT=1
     . /home/admin/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+
+setopt extended_glob
